@@ -11,7 +11,7 @@ from models.review import Review
 from models import storage
 
 
-class HbnbCommand(cmd.Cmd):
+class HBNBCommand(cmd.Cmd):
     """ Contains the functionality for the HBNB console"""
 
     prompt = '(hbnb) '
@@ -23,21 +23,13 @@ class HbnbCommand(cmd.Cmd):
     }
 
     def do_quit(self, arg):
-        """ Method to exit the HBNB console"""
+        """ Quit command to exit the program"""
         exit()
-
-    def help_quit(self):
-        """ Prints the help documentation for quit  """
-        print("Exit the HBNB console")
 
     def do_EOF(self, line):
-        """ Handles EOF to exit program """
+        """ EOF command to exit the program """
         print()
         exit()
-
-    def help_EOF(self):
-        """ Prints the help documentation for EOF  """
-        print("Handles EOF to exit program")
 
     def do_create(self, line):
         """ Creates a new instance of BaseModel,
@@ -147,4 +139,4 @@ class HbnbCommand(cmd.Cmd):
 
 
 if __name__ == '__main__':
-    HbnbCommand().cmdloop()
+    HBNBCommand().cmdloop()
