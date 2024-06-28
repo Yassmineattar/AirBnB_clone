@@ -31,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """Do nothing on empty input line"""
         pass
-    
+
     def do_quit(self, arg):
         """ Quit command to exit the program"""
         exit()
