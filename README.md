@@ -25,9 +25,18 @@ The console works both in interactive mode and non-interactive mode, much like a
 | Destroy an object | `(hbnb) destroy <class> <id>` or `(hbnb) <class>.destroy(<id>)` |
 | Show all objects, or all instances of a class | `(hbnb) all` or `(hbnb) all <class>` |
 | Update an attribute of an object | `(hbnb) update <class> <id> <attribute name> "<attribute value>"` or `(hbnb) <class>.update(<id>, <attribute name>, "<attribute value>")` |
-
-
-
+## Second Step
+HTML (Vsual Interface)
+## Third Step
+MYSQL-Database (STORAGE)
+## Fourth Step
+Deployement of HTML with Fabric
+## Fifth Step
+Flask web Application Server (integrate modules with HTML)
+## Sixth Step
+REST API( Object -> JSON)
+## Seventh Step
+Web Dynamics( integrate JSON API with HTML)
 <!-- TASKS:
 put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances
 create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
