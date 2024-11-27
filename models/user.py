@@ -1,18 +1,28 @@
 #!/usr/bin/python3
-"""class User that inherits from BaseModel"""
-
+"""This module defines a class User"""
 from models.base_model import BaseModel
+from models.base_model import Base
+from sqlalchemy import Column, String
+from sqlalchemy.orm import relationship
+from models.place import Place
+from models.review import Review
 
 
-class User(BaseModel):
-    """class User that inherits from BaseModel
-    Public class attributes:
-        email: string - empty string
-        password: string - empty string
-        first_name: string - empty string
-        last_name: string - empty string
+class User(BaseModel, Base):
+    """This class defines a user by various attributes"""
     """
-    email = ""
-    password = ""
-    first_name = ""
-    last_name = ""
+    email = ''
+    password = ''
+    first_name = ''
+    last_name = ''
+    """
+    __tablename__ = "users"
+
+    email = Column(String(128), nullable=False)
+    password = Column(String(128), nullable=False)
+    first_name = Column(String(128))
+    last_name = Column(String(128))
+    places = relationship('Place', backref="user",
+                          cascade='all, delete, delete-orphan')
+    reviews = relationship('Review', backref="user",
+                           cascade='all, delete, delete-orphan')
